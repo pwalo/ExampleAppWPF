@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ExampleApp"
         mc:Ignorable="d"
-        Title="Paul's Demo" Height="450" Width="800" FontSize="22" FontFamily="Segoe UI" Loaded="Window_Loaded">
+        Title="Paul's Demo" Height="600" Width="900" FontSize="22" FontFamily="Segoe UI" Loaded="Window_Loaded" WindowStartupLocation="CenterScreen" WindowState="Maximized">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="20"/>
@@ -24,19 +24,29 @@
             <RowDefinition Height="20"/>
         </Grid.RowDefinitions>
 
-        <TextBlock Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="1" Text="Demo App WPF C#" TextAlignment="Center" VerticalAlignment="Center" FontSize="28" FontWeight="Bold" Margin="5,10" Padding="2,4"/>
-        <TextBlock Grid.Column="1" Grid.Row="1" Text="Logo" TextAlignment="Center" VerticalAlignment="Center"/>
-
-        <TextBlock Grid.Row="1" Grid.Column="4" x:FieldModifier="private" x:Name="myDateTime" TextAlignment="Center" VerticalAlignment="Center" FontSize="18"/>
-       
-        <TextBlock Grid.Column="1" Grid.Row="2" Text="Box 1" TextAlignment="Center" VerticalAlignment="Center"/>
-        <TextBlock Grid.Column="2" Grid.Row="2" Text="Box 2" TextAlignment="Center" VerticalAlignment="Center"/>
-        <TextBlock Grid.Column="3" Grid.Row="2" Text="Box 3" TextAlignment="Center" VerticalAlignment="Center"/>
-        <TextBlock Grid.Column="4" Grid.Row="2" Text="Box 4" TextAlignment="Center" VerticalAlignment="Center"/>
-        <TextBlock Grid.Column="1" Grid.Row="3" Text="Box 5" TextAlignment="Center" VerticalAlignment="Center"/>
-        <TextBlock Grid.Column="2" Grid.Row="3" Text="Box 6" TextAlignment="Center" VerticalAlignment="Center"/>
-        <TextBlock Grid.Column="3" Grid.Row="3" Text="Box 7" TextAlignment="Center" VerticalAlignment="Center"/>
-        <Grid Grid.Column="4" Grid.Row="3" >
+        <TextBlock Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="1" Text="Demo App WPF C#" TextAlignment="Center" VerticalAlignment="Center" FontSize="36" FontWeight="Bold" Margin="5,10" Padding="2,4"/>
+        <TextBlock Grid.Column="1" Grid.Row="1" TextAlignment="Center" VerticalAlignment="Center">
+            <Hyperlink TextDecorations="" NavigateUri="https://www.kloecknermetalsuk.com/kloeckner-cares/" RequestNavigate="Hyperlink_RequestNavigate">   
+                    <Image Margin="20" Source="https://www.kloecknermetals.com/wp-content/uploads/2020/10/20.png" />
+                </Hyperlink>
+        </TextBlock>
+      
+        <TextBlock Grid.Column="1" Grid.Row="2" TextAlignment="Center" VerticalAlignment="Center">
+            Box 1<LineBreak/>
+            Sales Quotes
+        </TextBlock>
+        <TextBlock Grid.Column="2" Grid.Row="2" TextAlignment="Center" VerticalAlignment="Center">
+            Box 2<LineBreak/>
+            Sale Contracts
+        </TextBlock>
+        <TextBlock Grid.Column="3" Grid.Row="2" TextAlignment="Center" VerticalAlignment="Center">
+            Box 3<LineBreak/>
+            Sales Orders
+        </TextBlock>
+        <TextBlock Grid.Column="1" Grid.Row="3" Text="Box 4" TextAlignment="Center" VerticalAlignment="Center"/>
+        <TextBlock Grid.Column="2" Grid.Row="3" Text="Box 5" TextAlignment="Center" VerticalAlignment="Center"/>
+        <TextBlock Grid.Column="3" Grid.Row="3" Text="Box 6" TextAlignment="Center" VerticalAlignment="Center"/>
+        <Grid Grid.Column="1" Grid.Row="4" >
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="1"/>
                 <ColumnDefinition Width="*"/>
@@ -50,18 +60,27 @@
                 <RowDefinition Height="1"/>
             </Grid.RowDefinitions>
             <TextBlock Grid.Column="1" Grid.Row="1" TextAlignment="Center" VerticalAlignment="Center" FontSize="18">
-                <Hyperlink NavigateUri="https://www.google.co.uk" RequestNavigate="Hyperlink_RequestNavigate">Google</Hyperlink>
+                <Hyperlink TextDecorations="" NavigateUri="https://www.google.co.uk" RequestNavigate="Hyperlink_RequestNavigate">   
+                    <Image Margin="10" Source="https://1000logos.net/wp-content/uploads/2016/11/google-logo.jpg" />
+                </Hyperlink>
             </TextBlock>
             <TextBlock Grid.Column="2" Grid.Row="1" TextAlignment="Center" VerticalAlignment="Center" FontSize="18">
-                <Hyperlink NavigateUri="https://www.bbc.co.uk" RequestNavigate="Hyperlink_RequestNavigate">BBC</Hyperlink>
+                <Hyperlink TextDecorations="" NavigateUri="https://www.bbc.co.uk" RequestNavigate="Hyperlink_RequestNavigate">
+                    <Image Margin="10" Source="https://download.logo.wine/logo/BBC/BBC-Logo.wine.png" />
+                </Hyperlink>
             </TextBlock>
             <TextBlock Grid.Column="1" Grid.Row="2" TextAlignment="Center" VerticalAlignment="Center" FontSize="18">
-                <Hyperlink NavigateUri="https://www.youtube.com" RequestNavigate="Hyperlink_RequestNavigate">DigiDesk</Hyperlink>
+                <Hyperlink TextDecorations="" NavigateUri="https://www.youtube.com" RequestNavigate="Hyperlink_RequestNavigate">KA</Hyperlink>
             </TextBlock>
             <TextBlock Grid.Column="2" Grid.Row="2" TextAlignment="Center" VerticalAlignment="Center" FontSize="18">
-                <Hyperlink NavigateUri="https://www.youtube.com" RequestNavigate="Hyperlink_RequestNavigate">Assistant</Hyperlink>
+                <Hyperlink TextDecorations="" NavigateUri="https://kloeco.sharepoint.com/sites/portalUK" RequestNavigate="Hyperlink_RequestNavigate">
+                    #DigiDesk
+                </Hyperlink>
             </TextBlock>
-        </Grid>  
-        <TextBlock Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="4" Text="Written by: You" TextAlignment="Center" VerticalAlignment="Center" FontSize="22" FontWeight="SemiBold"/>
+        </Grid>
+        <TextBlock Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="4" Text="Written by: Anyone!" TextAlignment="Center" VerticalAlignment="Center" FontSize="22" FontWeight="SemiBold"/>
+        <TextBlock TextWrapping="Wrap" Grid.Column="4" Grid.Row="1" Margin="40" x:FieldModifier="private" x:Name="myDateTime" TextAlignment="Center" VerticalAlignment="Center" FontSize="28" FontWeight="DemiBold"/>
+         <Image Grid.Column="4" Grid.Row="2" Grid.RowSpan="3" Margin="5,20" Source="https://www.kloecknermetalsuk.com/wp-content/uploads/2021/03/Vision_Mission.png"/>
+
     </Grid>
 </Window>

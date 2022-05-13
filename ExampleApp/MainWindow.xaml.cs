@@ -36,7 +36,7 @@ namespace ExampleApp
         {
             DispatcherTimer timer = new DispatcherTimer(TimeSpan.FromSeconds(1), DispatcherPriority.Normal, (object s, EventArgs ev) =>
             {
-                this.myDateTime.Text = DateTime.Now.ToString("dd/MM/yyyy hh:mm:ss");
+                this.myDateTime.Text = DateTime.Now.ToString("dd/MM/yyyy - HH:mm:ss");
             }, this.Dispatcher);
             timer.Start();
         }
