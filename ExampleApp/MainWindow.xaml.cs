@@ -36,9 +36,19 @@ namespace ExampleApp
         {
             DispatcherTimer timer = new DispatcherTimer(TimeSpan.FromSeconds(1), DispatcherPriority.Normal, (object s, EventArgs ev) =>
             {
-                this.myDateTime.Text = DateTime.Now.ToString("dd/MM/yyyy - HH:mm:ss");
+                this.myDateTime.Text = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
             }, this.Dispatcher);
             timer.Start();
+        }
+
+        private void pushMeBTN_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Oi, Don't push me!");
+        }
+
+        private void exitBTN_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
         }
     }
 }
